@@ -41,7 +41,7 @@ export function useAudioAnalyzer(isListening: boolean) {
     // Expose a function to get current frequency data
     const getFrequencyData = () => {
         if (analyser && dataArrayRef.current) {
-            analyser.getByteFrequencyData(dataArrayRef.current)
+            analyser.getByteFrequencyData(dataArrayRef.current as any)
             return dataArrayRef.current
         }
         return null
