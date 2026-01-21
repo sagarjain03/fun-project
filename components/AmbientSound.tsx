@@ -28,7 +28,7 @@ export default function AmbientSound() {
             <button
                 onClick={toggleSound}
                 className="bg-white/10 backdrop-blur-md p-3 rounded-full hover:bg-white/20 transition-all border border-white/20 text-white"
-                aria-label="Toggle Ambient Sound"
+                aria-label="Toggle Background Music"
             >
                 {isPlaying ? (
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
@@ -42,7 +42,7 @@ export default function AmbientSound() {
             </button>
             <audio
                 ref={audioRef}
-                src="https://cdn.freesound.org/previews/246/246261_4518428-lq.mp3" // Gentle Wind/Lofi Placeholder
+                src="/music.mp3" // Local background music
                 loop
                 className="hidden"
             />

@@ -6,6 +6,7 @@ export interface IBook extends Document {
     content: string
     language: 'en' | 'hi'
     mood?: string
+    tags?: string[]
     coordinates: {
         x: number
         y: number
@@ -19,6 +20,7 @@ const BookSchema = new Schema<IBook>({
     content: { type: String, required: true },
     language: { type: String, enum: ['en', 'hi'], required: true },
     mood: { type: String },
+    tags: { type: [String], default: [] },
     coordinates: {
         x: { type: Number, required: true },
         y: { type: Number, required: true },
